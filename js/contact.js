@@ -30,7 +30,7 @@ $(document).ready(function()
 	setHeader();
 	initMenu();
 	initGoogleMap();
-	//initGallery();
+	initGallery();
 
 	$(window).on('resize', function()
 	{
