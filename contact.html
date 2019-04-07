@@ -17,7 +17,10 @@
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
-			$('a.colorbox').on('mouseenter', function(){
+			
+	
+			
+			$(document).on('mouseenter','a.colorbox', function(){
 				$(this).fancybox({
     'transitionIn': 'none',
     'transitionOut': 'none',
