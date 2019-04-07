@@ -287,7 +287,11 @@
 	
 	
 <script> 
-		
+		if ( e.className.match(/news/) ) {
+    e.className = e.className.replace("something", "active")
+}
+
+
 	//$(function(){
     //$("li.news").removeClass("news").addClass("active");
 //});
