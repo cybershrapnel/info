@@ -173,8 +173,20 @@
 		});
 	
 
-	
-	
+		$(document).ready(function(){
+			$('a.colorbox').live('mouseenter', function(){
+				$(this).colorbox({
+					'overlayColor': '#000',
+					'overlayOpacity': 0.6,
+					'transitionIn': 'elastic',
+					'transitionOut': 'elastic',
+					'centerOnScroll': true,
+					'titlePosition': 'over',
+					'easingIn': 'easeOutBack',
+					'easingOut': 'easeInBack'
+				});
+			});
+		});
 	
 </script>
 <script src="styles/bootstrap-4.1.2/popper.js"></script>
