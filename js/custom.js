@@ -148,12 +148,13 @@ var ctrl = new ScrollMagic.Controller();
     	if($('.timer').length)
     	{
     		// Uncomment line below and replace date
-	    	// var target_date = new Date("Dec 7, 2019").getTime();
+	        var target_date = new Date("Feb 15, 2018 12:00:00").getTime();
+
 
 	    	// comment lines below
-	    	var date = new Date();
-	    	date.setDate(date.getDate() + 3);
-	    	var target_date = date.getTime();
+	    	//var date = new Date();
+	    	//date.setDate(date.getDate() + 3);
+	    	//var target_date = date.getTime();
 	    	//----------------------------------------
 	 
 			// variables for time units
@@ -168,7 +169,7 @@ var ctrl = new ScrollMagic.Controller();
 			{
 			    // find the amount of "seconds" between now and target
 			    var current_date = new Date().getTime();
-			    var seconds_left = (target_date - current_date) / 1000;
+			    var seconds_left = (current_date - target_date) / 1000;
 			 
 			    // do some time calculations
 			    days = parseInt(seconds_left / 86400);
