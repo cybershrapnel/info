@@ -272,7 +272,7 @@
 				</div>
 			</div>
 		</div>
-	<h1 onclick=" $("li.news").removeClass("news").addClass("active");"> testing</h1>
+	<h1 onclick=" $(function(){$("li.news").removeClass("news").addClass("active");});"> testing</h1>
 </div>
 	
 <script src="js/jquery-3.3.1.min.js"></script>
@@ -289,9 +289,9 @@
 	
 <script> 
 		
-	$(function(){
-    $("li.news").removeClass("news").addClass("active");
-});
+	//$(function(){
+    //$("li.news").removeClass("news").addClass("active");
+//});
 </script>
 <script src="styles/bootstrap-4.1.2/popper.js"></script>
 <script src="styles/bootstrap-4.1.2/bootstrap.min.js"></script>
