@@ -272,7 +272,7 @@
 				</div>
 			</div>
 		</div>
-	<h1 class="testcall" onclick="$(function(){$("h1.testcall").removeClass("testcall").addClass("active");});"> testing</h1>
+	<h1 class="testcall" onclick="this.className = e.className.replace("news", "active")"> testing</h1>
 </div>
 	
 <script src="js/jquery-3.3.1.min.js"></script>
@@ -287,7 +287,7 @@
 	
 	
 <script> 
-		if ( e.className.match(/news/) ) {e.className = e.className.replace("news", "active")}
+		document.getElementById("news").className.replace("news", "active")}
 
 
 	//$(function(){
