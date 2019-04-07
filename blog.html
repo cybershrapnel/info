@@ -287,7 +287,8 @@
 	
 	
 <script> 
-		document.getElementById("news").className.replace("news", "active");
+		  var element = document.getElementById("news");
+  element.className = element.className.replace(/\bnews\b/g, "active");
 
 
 	//$(function(){
