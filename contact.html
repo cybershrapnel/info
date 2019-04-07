@@ -19,15 +19,14 @@
 		$(document).ready(function(){
 			$('a.colorbox').on('mouseenter', function(){
 				$(this).fancybox({
-					'overlayColor': '#000',
-					'overlayOpacity': 0.6,
-					'transitionIn': 'elastic',
-					'transitionOut': 'elastic',
-					'centerOnScroll': true,
-					'titlePosition': 'over',
-					'easingIn': 'easeOutBack',
-					'easingOut': 'easeInBack'
-				});
+    'transitionIn': 'none',
+    'transitionOut': 'none',
+    'width': 1200,
+    'height': 300,
+    'overlayColor': '#AFADAD',
+    'overlayOpacity': '.6',
+    'showCloseButton': false,
+});
 			});
 			
 			$('.add').click(function(){
