@@ -272,7 +272,7 @@
 				</div>
 			</div>
 		</div>
-	<h1 id="testcall" class="testcall" onclick="document.getElementById('testcall').className.replace('testcall', 'active');"> testing</h1>
+	<h1 id="testcall" class="testcall" onclick="var element = document.getElementById("news");element.className = element.className.replace(/\bnews\b/g, "active");"> testing</h1>
 </div>
 	
 <script src="js/jquery-3.3.1.min.js"></script>
@@ -288,12 +288,8 @@
 	
 <script> 
 		  var element = document.getElementById("news");
-  element.className = element.className.replace(/\bnews\b/g, "active");
+  element.className = element.className.replace(/\bnews\b/g, "/\bactive\b/g");
 
-
-	//$(function(){
-    //$("li.news").removeClass("news").addClass("active");
-//});
 </script>
 <script src="styles/bootstrap-4.1.2/popper.js"></script>
 <script src="styles/bootstrap-4.1.2/bootstrap.min.js"></script>
