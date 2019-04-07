@@ -158,17 +158,35 @@
 <script src="js/jquery-3.3.1.min.js"></script>
 
 <script> 
-	$(document).ready(function(){$("#header").load("header.html"); 
+
+		$(function(){
+ 			
+			$("#header").load("header.html"); 
 			$("#footer").load("footer.html"); 
 			$("#social").load("social.html");
 			$("#download").load("download.html");
 			$("#login").load("login.html");
 			$("#menu").load("menu.html");
-			$("#socialmenu").load("socialmenu.html"); }) 
-		$(function(){
- 			
+			$("#socialmenu").load("socialmenu.html");
+			
+			
 		});
-	$(window).load(function(){initGallery(); })
+	
+	$(document).ready(function(){
+			$('a.colorbox').live('mouseenter', function(){
+				$(this).colorbox({
+					'overlayColor': '#000',
+					'overlayOpacity': 0.6,
+					'transitionIn': 'elastic',
+					'transitionOut': 'elastic',
+					'centerOnScroll': true,
+					'titlePosition': 'over',
+					'easingIn': 'easeOutBack',
+					'easingOut': 'easeInBack'
+				});
+			});
+	
+	
 	
 </script>
 <script src="styles/bootstrap-4.1.2/popper.js"></script>
