@@ -606,13 +606,22 @@
 		</div>
 	</div>
 
-	<div id="footer">
-	
-		
-		
-		
-	</div>
+	<div id="footer"></div>
 
+	<div class="footer_bar">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="footer_bar_content d-flex flex-row align-items-center justify-content-start">
+							<div class="copyright">
+                Copyright &copy;<div id="year"></div> All rights reserved
+</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
 </div>
 <script src="js/jquery-3.3.1.min.js"></script>
 <script>var year= new Date().getFullYear();</script>
@@ -622,11 +631,7 @@
 			$("#footer").load("footer.html"); 
 		});
 </script>
-	<script> 
-		
-			document.getElementById("year").innerHTML = "testingnow";
-		
-</script>
+
 
 
 <script src="styles/bootstrap-4.1.2/popper.js"></script>
