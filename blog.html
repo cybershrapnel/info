@@ -11,6 +11,17 @@
 <link href="plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="styles/blog.css">
 <link rel="stylesheet" type="text/css" href="styles/blog_responsive.css">
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(document).on('mouseenter','a.colorbox', function(){
+				$(this).colorbox({
+					'width': '80%'
+				});
+			});			
+		});
+		
+	</script>
 </head>
 <body>
 
@@ -287,7 +298,7 @@
 		</div>
 </div>
 	
-<script src="js/jquery-3.3.1.min.js"></script>
+
 <script> 
 		$(function(){
  			$("#header").load("header.html"); 
