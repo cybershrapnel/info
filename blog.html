@@ -282,7 +282,9 @@
  			$("#header").load("header.html"); 
 			$("#footer").load("footer.html"); 
 		});
-	document.getElementById("news").className = "active";
+	$(function(){
+    $("li.news").addClass("active");
+});
 </script>
 <script src="styles/bootstrap-4.1.2/popper.js"></script>
 <script src="styles/bootstrap-4.1.2/bootstrap.min.js"></script>
