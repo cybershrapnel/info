@@ -211,9 +211,14 @@
 
 		});	
 	
-	$(document).ready(function(){
-$(document).on($( ".blog_load1" ).appendTo( ".blog_load2" )); 
+	
+	$("body").on('DOMSubtreeModified', "blog_load1", function() {
+    alert('changed');
 });
+	
+	//$(document).ready(function(){
+//$(document).on($( ".blog_load1" ).appendTo( ".blog_load2" )); 
+//});
 	
 	
 	
