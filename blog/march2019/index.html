@@ -180,31 +180,32 @@
 			$("#menu").load("../../menu.html");
 			$("#socialmenu").load("../../socialmenu.html");
 			
-			var msg = "load";
+			var msg = 1;
 			var loadcount=1;
 			
 			
 			
 			$("#blog_load").load("1.html", function( response, status, xhr ) {
   					if ( status == "error" ) {
-  						 msg = "error";
+  						 msg = 2;
   						 // $( "#blog_load" ).html( msg + xhr.status + " " + xhr.statusText );
   					}
 					else{
-						msg="load";
+						msg=1;
 						loadcount++;
 					}
 				});
 			
 			
-			while(msg == "load"){
-					$("#blog_load").load("2.html", function( response, status, xhr ) {
+			var filename ="#blog_load" + loadcount;
+			while(msg == 1){
+					$(filename).load("2.html", function( response, status, xhr ) {
   					if ( status == "error" ) {
-  						 msg = "error";
+  						 msg = 2;
   						 // $( "#blog_load" ).html( msg + xhr.status + " " + xhr.statusText );
   					}
 					else{
-						msg="load";
+						msg=1;
 						loadcount++;
 					}
 				});
