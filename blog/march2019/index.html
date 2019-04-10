@@ -207,9 +207,10 @@
 	
 	
 	$("body").on('DOMSubtreeModified', "#blog_load1", function() {
-    //alert('changed');
+   alert('changed');
 	$("body").on($( ".blog_load1" ).clone().appendTo( ".blog_load2" ));
 	var ii=2;
+		alert('changed2');
 				$( "#blog_load1" ).load(ii+".html", function( response, status, xhr ) {
   					if ( status == "error" ) {
 	 					
@@ -218,6 +219,7 @@
  					 }
 				});
 				ii++;
+		alert('changed3');
 });
 	
 	
