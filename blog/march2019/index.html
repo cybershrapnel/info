@@ -172,18 +172,10 @@
 
 <script> 
 	
-	
-	
-		$(function(){
- 			$("#header").load("../../header.html"); 
-			$("#footer").load("../../footer.html");
-			$("#social").load("../../social.html");
-			$("#download").load("../../download.html");
-			$("#login").load("../../login.html");
-			$("#menu").load("../../menu.html");
-			$("#socialmenu").load("../../socialmenu.html");
-
-			
+	founction dothis(){
+		
+		
+		
 			
 			var i=1;
 			
@@ -218,6 +210,21 @@
 				
 			}	
 			
+			
+			
+		}
+
+		$(function(){
+ 			$("#header").load("../../header.html"); 
+			$("#footer").load("../../footer.html");
+			$("#social").load("../../social.html");
+			$("#download").load("../../download.html");
+			$("#login").load("../../login.html");
+			$("#menu").load("../../menu.html");
+			$("#socialmenu").load("../../socialmenu.html");
+
+			
+			
 		});	
 
 	$("body").on('DOMSubtreeModified', "#blog_load1", function() {
@@ -226,7 +233,7 @@
 				   }
 		$("body").on($( ".blog_load1" ).clone().prop('class', 'klon' ).prop('id', 'klon' ).prop('style', 'visibility: visible' ).prependTo( ".blog_load2" ));
 	});
-	
+		dothis();
 </script>
 	
 	
