@@ -181,23 +181,31 @@
 			$("#socialmenu").load("../../socialmenu.html");
 
 			var i=1;
-				
+			
+			var stop=0;
+			var wait=1000;	
 			for(let n=0;n<=10;n++){
 				  setTimeout(function () {
 				$( "#blog_load1" ).load(i+".html", function( response, status, xhr ) {
   					if ( status == "error" ) {
 					 n=99;
+					stop=99;	
    						 var msg = n+ " Sorry but there was an error: ";
    						 $( "#blog_load1" ).html( msg + xhr.status + " " + xhr.statusText );
 						return false;
  					 }
+					else{
+					stop=99;	
+					}
 				});
 				i++;	
 				
 				 }, 3000);
-				if(n==99)
+				while(wait==1000)
 				{
-				return false;
+				if (stop==99){
+				wait=0;	
+				}
 				}
 				
 				
