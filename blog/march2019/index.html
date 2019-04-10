@@ -207,13 +207,13 @@
 	
 	
 	$("body").on('DOMSubtreeModified', "#blog_load2", function() {	
-	$("body").on($( ".blog_post_text" ).prop('style', 'display: none' ));
+	$("body").on(function{$( ".blog_post_text" ).prop('style', 'display: none' );$( ".blog_post_text" ).prop('style', 'display: none' );});
 	//$("body").on($( "#bloggybutton" ).prop('id', 'klonebutton'+i ));
 	});
-		$("body").on('DOMSubtreeModified', "#blog_post_text", function() {	
+	//	$("body").on('DOMSubtreeModified', "#blog_post_text", function() {	
 	//$("body").on($( ".blog_post_text" ).prop('style', 'display: none' ));
-	$("body").on($( "#bloggybutton" ).prop('id', 'klonebutton'+i ));
-	});
+	//$("body").on($( "#bloggybutton" ).prop('id', 'klonebutton'+i ));
+	//});
 
 	
 	dothis();
