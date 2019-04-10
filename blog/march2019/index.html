@@ -214,6 +214,7 @@
 	
 	$("body").on('DOMSubtreeModified', "#blog_load1", function() {
     alert('changed');
+		$( ".blog_load1" ).appendTo( ".blog_load2" );
 });
 	
 	//$(document).ready(function(){
