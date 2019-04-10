@@ -205,12 +205,14 @@
 			$("#socialmenu").load("../../socialmenu.html");					
 		});	
 	var k=0;
+	var l=0;
 	$("body").on('DOMSubtreeModified', "#blog_load1", function() {	
 		//$("body").on($( ".blog_load1" ).clone().prop('class', 'klone' ).prop('id', 'klone'+i ).prop('style', 'visibility: visible' ).prependTo( ".blog_load2" ));
 		
-		if(k!=i)
+		if(k!=i || l==1){
 		$( ".blog_load1" ).clone().prop('class', 'klone' ).prop('id', 'klone'+i ).prop('style', 'visibility: visible' ).prependTo( ".blog_load2" );
-		
+		l=1'
+		}
 		k=i;	
 	});
 	
