@@ -179,63 +179,29 @@
 			$("#menu").load("../../menu.html");
 			$("#socialmenu").load("../../socialmenu.html");
 			
-			var msg = 1;
-			var loadcount=3;
-			var filename =loadcount + ".html";
+			
 			
 			
 			
 			
 			var donext=1;
-var isEmpty = document.getElementById('blog_load3').innerHTML === "";
+var isEmpty = document.getElementById('blog_load2').innerHTML === "";
 			
 			
-			isEmpty = document.getElementById('blog_load3').innerHTML === "";
-		if(isEmpty && donext==1){
+			isEmpty = document.getElementById('blog_load2').innerHTML === "";
+			if(isEmpty && donext==1){
 			
-			$( "#blog_load3" ).load("3.html", function( response, status, xhr ) {
-  if ( status == "error" ) {
-	  donext=0;
-	  var newcount="#blog_load"+loadcount+1;
-    var msg = "Sorry but there was an error: ";
-    $( "#blog_load3" ).html( msg + xhr.status + " " + xhr.statusText );
-  }
-});
-			
-		}
-			
-			
-			$("#blog_load").load("1.html", function( response, status, xhr ) {
+				$( "#blog_load2" ).load("2.html", function( response, status, xhr ) {
   					if ( status == "error" ) {
-  						 msg = 2;
-  						  $( "#blog_load"+loadcount ).html( msg + xhr.status + " " + xhr.statusText );
-  					}
-					else{
-						 $( "#blog_load"+loadcount ).html( msg + xhr.status + " " + xhr.statusText );
-						msg=1;
-						loadcount=loadcount+1;
-					}
-				
-				}
-					    );
-			
-			
-			
-			var i=2;
-			
-					$('#blog_load'+loadcount).load("2.html", function( response, status, xhr ) {
-  					if ( status == "error" ) {
-  						 msg = 2;
-  						 // $( "#blog_load" ).html( msg + xhr.status + " " + xhr.statusText );
-  					}
-					else{
-						msg=1;
-						loadcount++;
-					}
+	 					 donext=0;
+   						 var msg = "Sorry but there was an error: ";
+   						 $( "#blog_load2" ).html( msg + xhr.status + " " + xhr.statusText );
+ 					 }
 				});
 			
+			}
 			
-		});
+			
 	
 	
 </script>
