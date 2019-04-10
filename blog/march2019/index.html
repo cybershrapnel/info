@@ -209,6 +209,7 @@
 	$("body").on('DOMSubtreeModified', "#blog_load2", function() {	
 	//$("body").on($( "#bloggybutton" ).prop('id', 'klonebutton'+i ));
 	$( "#bloggybutton" ).prop('id', 'klonebutton'+i );
+		$( "#bloggybutton2" ).prop('id', 'klonebuttonhide'+i );
 		$( "#blogposttext" ).prop('id', 'blogposttext'+i );
 		$( "#blogposttextpreview" ).prop('id', 'blogposttextpreview'+i );
 
@@ -230,7 +231,9 @@
 	function showarticle(it){
 		it++;
 				$( "#klonebutton"+it ).prop('style', 'display: none' );
+		$( "#klonebuttonhide"+it ).prop('style', 'display: block' );
 	$( ".blog_post_text" ).prop('style', 'display: block' );
+		
 		$("body").on($( "#blogposttextpreview"+it ).prop('style', 'display: none' ));
 		//$("body").on($( ".blog_post_text" ).prop('style', 'display: block' ));
 		//$("body").on($( "#klonebuttonshow"+it ).prop('style', 'display: block' ));
