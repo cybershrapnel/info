@@ -171,21 +171,10 @@
 	
 
 <script> 
-		$(function(){
- 			$("#header").load("../../header.html"); 
-			$("#footer").load("../../footer.html");
-			$("#social").load("../../social.html");
-			$("#download").load("../../download.html");
-			$("#login").load("../../login.html");
-			$("#menu").load("../../menu.html");
-			$("#socialmenu").load("../../socialmenu.html");
-
-			var i=1;
+	var i=1;
 			
 			var stop=0;
-		doit();
-			//for(let n=0;n<=10;n++){
-			function doit(){
+	function doit(){
 				$( "#blog_load1" ).load(i+".html", function( response, status, xhr ) {
   					if ( status == "error" ) {
 					 n=99;
@@ -213,6 +202,20 @@
 				}
 				stop=0;
 			}	
+	
+		$(function(){
+ 			$("#header").load("../../header.html"); 
+			$("#footer").load("../../footer.html");
+			$("#social").load("../../social.html");
+			$("#download").load("../../download.html");
+			$("#login").load("../../login.html");
+			$("#menu").load("../../menu.html");
+			$("#socialmenu").load("../../socialmenu.html");
+
+			
+		doit();
+			//for(let n=0;n<=10;n++){
+			
 			
 		});	
 
