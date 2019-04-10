@@ -186,11 +186,12 @@
 		//$("a").attr("href", "http://www.google.com/")
 		//$("a.link3").attr("href", "http://cupcream.com");
 		//$(".link3").attr("href", "http://www.google.com/");
-		
-				$("#link3").attr("href", "http://www.google.com/");
-
+		$( ".blog_load3" ).prop('class', 'klon22e' );
 	}
 	
+	$("body").on('DOMSubtreeModified', "#blog_load3", function() {	
+				$("#link3").attr("href", "http://www.google.com/");
+		});
 	
 	function dothis(){
 		
