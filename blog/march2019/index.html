@@ -104,8 +104,14 @@
 				<!-- Blog Posts -->
 				<div class="col-lg-9">
 					<div class="blog_posts">
-					<div id="blog_load"></div>
-					<div id="blog_load2"></div>
+						
+					<div id="blog_load"  style="visibility: hidden">
+						<div id="blog_load1"></div>
+						
+						</div>
+						
+						
+						<div id="blog_load2"></div>
 						<div id="blog_load3"></div>
 						<div id="blog_load4"></div>
 						<div id="blog_load5"></div>
@@ -192,15 +198,18 @@
 			isEmpty = document.getElementById('blog_load'+i).innerHTML === "";
 			if(isEmpty && donext==1){
 			
-				$( "#blog_load2" ).load(i+".html", function( response, status, xhr ) {
+				$( "#blog_load1" ).load(i+".html", function( response, status, xhr ) {
   					if ( status == "error" ) {
 	 					donext=0;
    						 var msg = "Sorry but there was an error: ";
-   						 $( "#blog_load2" ).html( msg + xhr.status + " " + xhr.statusText );
+   						 $( "#blog_load1" ).html( msg + xhr.status + " " + xhr.statusText );
  					 }
 				});
 			
 			}
+			var content = document.getElementById('blog_load1').innerHTML();
+			$( "#blog_load2" ).append(content);
+			
 			
 		});	
 	
