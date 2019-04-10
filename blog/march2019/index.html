@@ -185,13 +185,16 @@
 			for(n=0;n<=10;n++){
 				$( "#blog_load1" ).delay( 800 ).load(i+".html", function( response, status, xhr ) {
   					if ( status == "error" ) {
-						n=99;
+					
    						 var msg = n+ " Sorry but there was an error: ";
    						 $( "#blog_load1" ).html( msg + xhr.status + " " + xhr.statusText );
 						return false;
  					 }
 				});
 				i++;	
+				if ($("#blog_load1").html().length < 50){
+				   	n=99;
+				   }
 				
 				
 			}	
