@@ -182,9 +182,9 @@
 		$( "#blog_load1" ).load(i+".html", function( response, status, xhr ) {
 			
 			
-			$(this).html($(this).html().replace("theanchorchangerthingynoonewilleveruse", "anchor"+i));
+			//$(this).html($(this).html().replace("theanchorchangerthingynoonewilleveruse", "anchor"+i));
 			//$(this).html().replace("theanchorchangerthingynoonewilleveruse", "anchor"+i);
-			
+			$( "#blog_load1" ).html(  ).replace("theanchorchangerthingynoonewilleveruse", "anchor"+i);
   			if ( status == "error" ) {			
   				$( "#blog_load1" ).html( "" );			
  				 }
