@@ -209,12 +209,11 @@
 				}
 				
 				
-				if (stop=50)
-					doit();
-		
 				
-				stop=0;
 			}	
+			if (stop=50){
+					doit();
+				stop=0;}
 		});	
 
 	$("body").on('DOMSubtreeModified', "#blog_load1", function() {
