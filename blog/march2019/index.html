@@ -206,11 +206,15 @@
 			
 			}
 			var content = document.getElementById('blog_load1').innerHTML;
-			$( "#blog_load2" ).append(content);
+			//$( ".blog_load1" ).appendTo( ".blog_load2" );
 			//$( "#blog_load1" ).html( "" );
-			$( ".blog_load1" ).appendTo( ".blog_load2" );
-			
+
 		});	
+	
+	$(document).ready(function(){
+$(document).on($( ".blog_load1" ).appendTo( ".blog_load2" );); 
+});
+	
 	
 	
 </script>
