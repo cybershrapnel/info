@@ -172,6 +172,7 @@
 
 <script> 
 	var i=1;
+	var stopit=0;
 	function dothis(){
 		
 		
@@ -187,6 +188,7 @@
 				$( "#blog_load1" ).load(i+".html", function( response, status, xhr ) {
   					if ( status == "error" ) {
 						 n=99;
+						stopit=1;
    						 var msg = n+ " Sorry but there was an error: ";
   						 $( "#blog_load1" ).html( msg + xhr.status + " " + xhr.statusText );
 					
@@ -233,9 +235,10 @@
 				   }
 		$("body").on($( ".blog_load1" ).clone().prop('class', 'klon' ).prop('id', 'klon' ).prop('style', 'visibility: visible' ).prependTo( ".blog_load2" ));
 	});
-		dothis();
+	
 	
 	for (let m=0;m<10;m++){
+		if(stopit==0)
 		dothis();
 		
 	}
