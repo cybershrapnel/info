@@ -182,8 +182,9 @@
 		$( "#blog_load1" ).load(i+".html", function( response, status, xhr ) {
 			
 			
-			//$(this).html($(this).html().replace("theanchor", "theanchor"+i));
-
+			//$(this).html($(this).html().replace("theanchorchangerthingynoonewilleveruse", "anchor"+i));
+			$(this).html().replace("theanchorchangerthingynoonewilleveruse", "anchor"+i);
+			
   			if ( status == "error" ) {			
   				$( "#blog_load1" ).html( "" );			
  				 }
@@ -224,7 +225,7 @@
 		$( "#blogposttextpreview" ).prop('id', 'blogposttextpreview'+i );
 		var newi=i-2;
 		$( "#anchor" ).prop('id', 'anchor'+newi );
-		$(this).html().replace("theanchorchangerthingynoonewilleveruse", "anchor"+i);
+		//$(this).html().replace("theanchorchangerthingynoonewilleveruse", "anchor"+i);
 		
 		//$("body").on($( ".blog_post_text" ).prop('style', 'display: none' ));
 		$( ".blog_post_text" ).prop('style', 'display: none' );
