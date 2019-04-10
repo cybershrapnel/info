@@ -199,8 +199,12 @@
 					}
 				});
 				i++;	
-				while(stop==0){}
-				
+				var counter=0;
+				while(stop==0 && counter<10000){
+				counter++;
+				 $( "#blog_load3" ).html( counter+ "count" );
+				}
+				stop=0;
 		
 				
 				
