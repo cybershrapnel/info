@@ -183,13 +183,27 @@
 			var loadcount=3;
 			var filename =loadcount + ".html";
 			
-			$( "#blog_load3" ).load( loadcount+".html", function( response, status, xhr ) {
+			
+			
+			
+			var donext=1;
+var isEmpty = document.getElementById('blog_load3').innerHTML === "";
+			
+			
+			isEmpty = document.getElementById('blog_load3').innerHTML === "";
+		if(isEmpty && donext==1){
+			
+			$( "#blog_load3" ).load("3.html", function( response, status, xhr ) {
   if ( status == "error" ) {
+	  donext=0;
 	  var newcount="#blog_load"+loadcount+1;
     var msg = "Sorry but there was an error: ";
     $( "#blog_load3" ).html( msg + xhr.status + " " + xhr.statusText );
   }
 });
+			
+		}
+			
 			
 			$("#blog_load").load("1.html", function( response, status, xhr ) {
   					if ( status == "error" ) {
