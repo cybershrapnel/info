@@ -182,7 +182,12 @@
 			var msg = 1;
 			var loadcount=3;
 			
-			
+			$( "#blog_load3" ).load( "/not-here.php", function( response, status, xhr ) {
+  if ( status == "error" ) {
+    var msg = "Sorry but there was an error: ";
+    $( "#blog_load4" ).html( msg + xhr.status + " " + xhr.statusText );
+  }
+});
 			
 			$("#blog_load").load("1.html", function( response, status, xhr ) {
   					if ( status == "error" ) {
@@ -194,7 +199,9 @@
 						msg=1;
 						loadcount=loadcount+1;
 					}
-				});
+				
+				}
+					    );
 			
 			
 			var filename =loadcount + ".html";
