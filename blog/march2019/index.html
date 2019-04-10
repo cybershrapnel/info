@@ -183,7 +183,7 @@
 			var i=1;
 				
 			for(n=0;n<=10;n++){
-				$( "#blog_load1" ).delay( 800 ).load(i+".html", function( response, status, xhr ) {
+				$( "#blog_load1" ).load(i+".html", function( response, status, xhr ) {
   					if ( status == "error" ) {
 					
    						 var msg = n+ " Sorry but there was an error: ";
@@ -192,6 +192,7 @@
  					 }
 				});
 				i++;	
+				setTimeout(function(){}, 500); 
 				
 				
 				
