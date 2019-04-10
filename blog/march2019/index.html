@@ -188,34 +188,29 @@
 			
 			
 			
-			var donext=1;
+		
 			var i=2;
-			var isEmpty = "";
 			
-			
-			isEmpty = document.getElementById('blog_load'+i).innerHTML === "";
-			if(isEmpty && donext==1){
 			
 				$( "#blog_load1" ).load(i+".html", function( response, status, xhr ) {
   					if ( status == "error" ) {
-	 					donext=0;
+	 					
    						 var msg = "Sorry but there was an error: ";
    						 $( "#blog_load1" ).html( msg + xhr.status + " " + xhr.statusText );
  					 }
 				});
+				i++;
 			
-			}
-			var content = document.getElementById('blog_load1').innerHTML;
-			//$( ".blog_load1" ).appendTo( ".blog_load2" );
-			//$( "#blog_load1" ).html( "" );
+			
+			
 
 		});	
 	
 	
 	$("body").on('DOMSubtreeModified', "#blog_load1", function() {
     //alert('changed');
-$("body").on($( ".blog_load1" ).appendTo( ".blog_load2" ));
-	$("body").on($( ".blog_load1" ).appendTo( ".blog_load3" ));
+	$("body").on($( ".blog_load1" ).appendTo( ".blog_load2" ));
+	
 });
 	
 	
