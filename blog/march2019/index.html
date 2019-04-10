@@ -205,7 +205,7 @@
 	var j=2;
 	$("body").on('DOMSubtreeModified', "#blog_load1", function() {	
 		//$("body").on($( ".blog_load1" ).clone().prop('class', 'klone' ).prop('id', 'klone'+i ).prop('style', 'visibility: visible' ).prependTo( ".blog_load2" ));
-		if((j%2)==0){
+		if((j%2)==1){
 		$( ".blog_load1" ).clone().prop('class', 'klone' ).prop('id', 'klone'+i ).prop('style', 'visibility: visible' ).prependTo( ".blog_load2" );
 		j++;
 		}
