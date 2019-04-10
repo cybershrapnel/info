@@ -181,11 +181,13 @@
 			
 			var msg = 1;
 			var loadcount=3;
+			var filename =loadcount + ".html";
 			
-			$( "#blog_load3" ).load( "/not-here.php", function( response, status, xhr ) {
+			$( "#blog_load"+loadcount ).load( "/not-here.php", function( response, status, xhr ) {
   if ( status == "error" ) {
+	  var newcount=loadcount_1;
     var msg = "Sorry but there was an error: ";
-    $( "#blog_load4" ).html( msg + xhr.status + " " + xhr.statusText );
+    $( "#blog_load"+newcount ).html( msg + xhr.status + " " + xhr.statusText );
   }
 });
 			
@@ -204,7 +206,7 @@
 					    );
 			
 			
-			var filename =loadcount + ".html";
+			
 			var i=2;
 			
 					$('#blog_load'+loadcount).load("2.html", function( response, status, xhr ) {
