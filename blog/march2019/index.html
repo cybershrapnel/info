@@ -179,6 +179,21 @@
 			var msg = "load";
 			car loadcount=1;
 			
+			
+			
+			$("#blog_load").load("1.html", function( response, status, xhr ) {
+  					if ( status == "error" ) {
+  						 msg = "error";
+  						 // $( "#blog_load" ).html( msg + xhr.status + " " + xhr.statusText );
+  					}
+					else{
+						msg="load";
+						loadcount++;
+					}
+				});
+			
+			
+			
 			while(msg == "load"){
 				$("#blog_load").load(loadcoun+".html", function( response, status, xhr ) {
   					if ( status == "error" ) {
