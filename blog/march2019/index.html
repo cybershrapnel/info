@@ -183,7 +183,7 @@
 			var i=1;
 			
 			var stop=0;
-		
+		doit();
 			//for(let n=0;n<=10;n++){
 			function doit(){
 				$( "#blog_load1" ).load(i+".html", function( response, status, xhr ) {
@@ -195,7 +195,7 @@
 						return false;
  					 }
 					else{
-					stop=50;	
+					stop=0;	
 						
 					}
 				});
@@ -208,12 +208,12 @@
 				 $( "#blog_load3" ).html( counter+ "count" );
 				}
 				
-				
-				
-			}	
-			if (stop=50){
+				if (stop=0){
 					doit();
-				stop=0;}
+				}
+				stop=0;
+			}	
+			
 		});	
 
 	$("body").on('DOMSubtreeModified', "#blog_load1", function() {
