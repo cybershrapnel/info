@@ -173,6 +173,8 @@
 <script> 
 	var i=1;
 	var stopit=0;
+	
+	var switch=0;
 	function dothis(){
 		
 		
@@ -237,8 +239,8 @@
 	});
 	
 	
-	for (let m=0;m<10;m++){
-		if(stopit==0)
+	for (let m=0;m<100;m++){
+		if(stopit==0 && switch==1)
 		dothis();
 		
 	}
