@@ -212,7 +212,8 @@
 		$( "#bloggybutton2" ).prop('id', 'klonebuttonhide'+i );
 		$( "#blogposttext" ).prop('id', 'blogposttext'+i );
 		$( "#blogposttextpreview" ).prop('id', 'blogposttextpreview'+i );
-		$( "#anchor4" ).prop('id', 'anchor'+i );
+		var newi=i-2;
+		$( "#anchor" ).prop('id', 'anchor'+newi );
 		$("body").on($( ".blog_post_text" ).prop('style', 'display: none' ));
 		//$("body").on($( ".blog_post_text" ).prop('id', 'blogtext'+i ));
 
