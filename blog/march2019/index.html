@@ -209,17 +209,9 @@
 	$("body").on('DOMSubtreeModified', "#blog_load1", function() {
    alert('changed');
 	$("body").on($( ".blog_load1" ).clone().appendTo( ".blog_load2" ));
-	var ii=2;
+	
 		alert('changed2');
-				$( "#blog_load1" ).load(ii+".html", function( response, status, xhr ) {
-  					if ( status == "error" ) {
-	 					
-   						 var msg = "Sorry but there was an error: ";
-   						 $( "#blog_load1" ).html( msg + xhr.status + " " + xhr.statusText );
- 					 }
-				});
-				ii++;
-		alert('changed3');
+		
 });
 	
 	
