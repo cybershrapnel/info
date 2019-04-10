@@ -210,16 +210,18 @@
 			//$( "#blog_load1" ).html( "" );
 
 		});	
-	var once=0;
+	
 	
 	$("body").on('DOMSubtreeModified', "#blog_load1", function() {
     //alert('changed');
+		var once=1;
 		//$( "#blog_load1" ).appendTo( "#blog_load2" );
-		if(once==0){
-		once=1;
+		if (once == 0){
+		var once=1;
 		$('#blog_load1').append( $('#blog_load2') );
 	}
 });
+	
 	
 	//$(document).ready(function(){
 //$(document).on($( "#blog_load1" ).appendTo( "#blog_load2" )); 
