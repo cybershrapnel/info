@@ -197,8 +197,8 @@
 				});
 			
 			
-			//while(msg == "load"){
-					$("#blog_load2").load("2.html", function( response, status, xhr ) {
+			while(msg == "load"){
+					$("#blog_load").load("2.html", function( response, status, xhr ) {
   					if ( status == "error" ) {
   						 msg = "error";
   						 // $( "#blog_load" ).html( msg + xhr.status + " " + xhr.statusText );
@@ -208,7 +208,7 @@
 						loadcount++;
 					}
 				});
-			//}
+			}
 			
 		});
 	
