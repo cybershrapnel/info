@@ -189,11 +189,11 @@ var isEmpty = document.getElementById('blog_load2').innerHTML === "";
 			
 			
 			isEmpty = document.getElementById('blog_load2').innerHTML === "";
-			if(isEmpty){
+			if(isEmpty && donext==1){
 			
 				$( "#blog_load2" ).load("2.html", function( response, status, xhr ) {
   					if ( status == "error" ) {
-	 					
+	 					donext=0;
    						 var msg = "Sorry but there was an error: ";
    						 $( "#blog_load2" ).html( msg + xhr.status + " " + xhr.statusText );
  					 }
