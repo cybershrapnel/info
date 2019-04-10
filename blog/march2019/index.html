@@ -173,7 +173,7 @@
 <script> 
 	
 	var i=1;
-	var k=1;
+	
 	function dothis(){
 		
 		
@@ -181,8 +181,8 @@
 		
 		$( "#blog_load1" ).load(i+".html", function( response, status, xhr ) {
 			
-			if(i<1)i=1; k=i+1;
-			$(this).html($(this).html().replace("theanchor", "theanchor"+k));
+			
+			$(this).html($(this).html().replace("theanchor", "theanchor"+i));
 
   			if ( status == "error" ) {			
   				$( "#blog_load1" ).html( "" );			
@@ -204,12 +204,14 @@
 			$("#menu").load("../../menu.html");
 			$("#socialmenu").load("../../socialmenu.html");					
 		});	
-	
+	var k=0;
 	$("body").on('DOMSubtreeModified', "#blog_load1", function() {	
 		//$("body").on($( ".blog_load1" ).clone().prop('class', 'klone' ).prop('id', 'klone'+i ).prop('style', 'visibility: visible' ).prependTo( ".blog_load2" ));
 		
+		if(k!=i)
 		$( ".blog_load1" ).clone().prop('class', 'klone' ).prop('id', 'klone'+i ).prop('style', 'visibility: visible' ).prependTo( ".blog_load2" );
-			
+		
+		k=i;	
 	});
 	
 	
