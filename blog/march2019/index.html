@@ -180,7 +180,8 @@
 
 		
 		$( "#blog_load1" ).load(i+".html", function( response, status, xhr ) {
-			$(this).html($(this).html().replace("theanchor", "theanchor"+i));
+			var k=i+1;
+			$(this).html($(this).html().replace("theanchor", "theanchor"+k));
 
   			if ( status == "error" ) {			
   				$( "#blog_load1" ).html( "" );			
