@@ -183,9 +183,9 @@
 			var loadcount=3;
 			var filename =loadcount + ".html";
 			
-			$( "#blog_load"+loadcount ).load( "/not-here.php", function( response, status, xhr ) {
+			$( "#blog_load"+loadcount ).load( loadcount+".html", function( response, status, xhr ) {
   if ( status == "error" ) {
-	  var newcount=loadcount_1;
+	  var newcount=loadcount+1;
     var msg = "Sorry but there was an error: ";
     $( "#blog_load"+newcount ).html( msg + xhr.status + " " + xhr.statusText );
   }
