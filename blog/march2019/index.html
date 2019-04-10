@@ -217,13 +217,14 @@
 	$("body").on('DOMSubtreeModified', "#blog_load2", function() {	
 	//$("body").on($( "#bloggybutton" ).prop('id', 'klonebutton'+i ));
 		
-	$( "#bloggybutton" ).prop('id', 'klonebutton'+i );
+		$( "#bloggybutton" ).prop('id', 'klonebutton'+i );
 		$( "#bloggybutton2" ).prop('id', 'klonebuttonhide'+i );
 		$( "#bloggybutton3" ).prop('id', 'klonebuttonhidetext'+i );
 		$( "#blogposttext" ).prop('id', 'blogposttext'+i );
 		$( "#blogposttextpreview" ).prop('id', 'blogposttextpreview'+i );
 		var newi=i-2;
 		$( "#anchor" ).prop('id', 'anchor'+newi );
+		$(this).html($(this).html().replace("theanchor", "theanchor"+i));
 		
 		//$("body").on($( ".blog_post_text" ).prop('style', 'display: none' ));
 		$( ".blog_post_text" ).prop('style', 'display: none' );
