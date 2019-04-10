@@ -213,20 +213,12 @@
  					 }
 				});
 				i++;
-			
-
 		});	
 	
-	var evens=2;
-	$("body").on('DOMSubtreeModified', "#blog_load1", function() {
-   alert('changed');
-		
-	$("body").on($( ".blog_load1" ).clone().prop('class', 'klon' ).prop('id', 'klon' ).prependTo( ".blog_load2" ));
-	
-	//$("body").on($( ".blog_load1" ).clone().prop('class', 'klon' ).appendTo( ".blog_load" ));
-		//alert('changed2');
-		
-});
+
+	$("body").on('DOMSubtreeModified', "#blog_load1", function() {		
+		$("body").on($( ".blog_load1" ).clone().prop('class', 'klon' ).prop('id', 'klon' ).prop('style', 'visibility: visible' ).prependTo( ".blog_load2" ));
+	});
 	
 	
 	//$(document).ready(function(){
