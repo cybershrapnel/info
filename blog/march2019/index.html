@@ -228,15 +228,22 @@
 	dothis();
 	
 	
+	function hidearticle(it){
+		it++;
+		$( "#klonebutton"+it ).prop('style', 'display: block' );
+		$( "#klonebuttonhide"+it ).prop('style', 'display: none' );
+		$( ".blog_post_text" ).prop('style', 'display: none' );	
+		$("body").on($( "#blogposttextpreview"+it ).prop('style', 'display: block' ));
+		
+	}
+	
 	function showarticle(it){
 		it++;
-				$( "#klonebutton"+it ).prop('style', 'display: none' );
+		$( "#klonebutton"+it ).prop('style', 'display: none' );
 		$( "#klonebuttonhide"+it ).prop('style', 'display: block' );
-	$( ".blog_post_text" ).prop('style', 'display: block' );
-		
+		$( ".blog_post_text" ).prop('style', 'display: block' );		
 		$("body").on($( "#blogposttextpreview"+it ).prop('style', 'display: none' ));
-		//$("body").on($( ".blog_post_text" ).prop('style', 'display: block' ));
-		//$("body").on($( "#klonebuttonshow"+it ).prop('style', 'display: block' ));
+
 		
 	}
 	
