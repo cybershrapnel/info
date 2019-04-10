@@ -187,19 +187,17 @@
 			
 			var i=1;
 			
-			var stop=0;
+		
 			
-			
-		//doit();
+
 			for(let n=0;n<=10;n++){
-			//function doit(){
+		
 				$( "#blog_load1" ).load(i+".html", function( response, status, xhr ) {
   					if ( status == "error" ) {
-					 n=99;
-					stop=99;	
+						 n=99;
    						 var msg = n+ " Sorry but there was an error: ";
-   						 $( "#blog_load1" ).html( msg + xhr.status + " " + xhr.statusText );
-						return false;
+  						 $( "#blog_load1" ).html( msg + xhr.status + " " + xhr.statusText );
+					
  					 }
 					else{
 					stop=0;	
@@ -210,15 +208,12 @@
 				
 				if (n > 55) return true;
 				var counter=0;
-				while(stop==0 && counter<=1000){
+				while(stop==0 && counter<=10){
 				counter++;
 				 $( "#blog_load3" ).html( counter+ "count" );
 				}
 				
-				if (stop=0){
-					//doit();
-				}
-				stop=0;
+			
 				
 				
 			}	
