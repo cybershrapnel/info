@@ -210,7 +210,7 @@
 	//$("body").on($( "#bloggybutton" ).prop('id', 'klonebutton'+i ));
 	$( "#bloggybutton" ).prop('id', 'klonebutton'+i );
 
-		$("body").on($( ".blog_post_text" ).prop('style', 'display: none' ));
+		$("body").on($( ".blog_post_text" ).prop('style', 'display: none' ).prop('id', 'blogtext'+i ));
 	
 	});
 	
@@ -223,7 +223,7 @@
 	dothis();
 	
 	
-	function showarticle(){
+	function showarticle(it){
 		$("body").on($( ".blog_post_text_preview" ).prop('style', 'display: none' ));
 		$("body").on($( ".blog_post_text" ).prop('style', 'display: block' ));
 		
