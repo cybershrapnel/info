@@ -187,6 +187,9 @@
   						$( "#blog_load1" ).html( msg + xhr.status + " " + xhr.statusText );
 					
  					 }
+					else{
+						setTimeout(dothis(), 1000);
+					}
 				
 				});
 				i++;	
@@ -228,7 +231,7 @@
 		
 		
 	dothis();
-		setTimeout(dothis(), 4 * 1000);
+		
 	//}
 	
 </script>
