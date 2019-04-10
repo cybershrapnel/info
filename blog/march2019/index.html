@@ -184,7 +184,10 @@
 			
 			//$(this).html($(this).html().replace("theanchorchangerthingynoonewilleveruse", "anchor"+i));
 			//$(this).html().replace("theanchorchangerthingynoonewilleveruse", "anchor"+i);
-			$( "#blog_load1" ).html(  ).replace("theanchorchangerthingynoonewilleveruse", "anchor"+i);
+			//$( "#blog_load1" ).html(  ).replace("theanchorchangerthingynoonewilleveruse", "anchor"+i);
+			 document.getElementById('link').innerHTML = "<a href='#anchor'>"+i+"Read More</a>";
+
+			
   			if ( status == "error" ) {			
   				$( "#blog_load1" ).html( "" );			
  				 }
