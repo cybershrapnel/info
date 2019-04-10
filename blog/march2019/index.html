@@ -239,8 +239,9 @@
 		$( "#klonebutton"+it ).prop('style', 'display: block' );
 		$( "#klonebuttonhide"+it ).prop('style', 'display: none' );
 		$( "#blogposttext"+it ).prop('style', 'display: none' );	
-		$("body").on($( "#blogposttextpreview"+it ).prop('style', 'display: block' ));
-		
+		//$("body").on($( "#blogposttextpreview"+it ).prop('style', 'display: block' ));
+		$( "#blogposttextpreview"+it ).prop('style', 'display: block' );
+
 	}
 	
 	function showarticle(it){
@@ -248,7 +249,8 @@
 		$( "#klonebutton"+it ).prop('style', 'display: none' );
 		$( "#klonebuttonhide"+it ).prop('style', 'display: block' );
 		$( "#blogposttext"+it ).prop('style', 'display: block' );		
-		$("body").on($( "#blogposttextpreview"+it ).prop('style', 'display: none' ));
+		//$("body").on($( "#blogposttextpreview"+it ).prop('style', 'display: none' ));
+		$( "#blogposttextpreview"+it ).prop('style', 'display: none' );
 
 		
 	}
