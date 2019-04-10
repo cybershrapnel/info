@@ -173,6 +173,20 @@
 <script> 
 	
 	var i=1;
+	var go=0;
+	
+	
+	function go(){
+	go=1;	
+	}
+	
+	function changelinks(){
+	document.getElementById('link1').innerHTML = "<a href='#anchor"+i+"'>Read More</a>";
+
+		
+		
+	}
+	
 	
 	function dothis(){
 		
@@ -189,7 +203,9 @@
 
 			
   			if ( status == "error" ) {			
-  				$( "#blog_load1" ).html( "" );			
+  				$( "#blog_load1" ).html( "" );	
+				setTimeout(go(), 1000);
+				setTimeout(changelinks(), 5000);
  				 }
 				else{
 					setTimeout(dothis(), 1000);
@@ -212,10 +228,10 @@
 	$("body").on('DOMSubtreeModified', "#blog_load1", function() {	
 		//$("body").on($( ".blog_load1" ).clone().prop('class', 'klone' ).prop('id', 'klone'+i ).prop('style', 'visibility: visible' ).prependTo( ".blog_load2" ));
 		
-		
+		if (go==0){
 		$( ".blog_load1" ).clone().prop('class', 'klone' ).prop('id', 'klone'+i ).prop('style', 'visibility: visible' ).prependTo( ".blog_load2" );
 					// document.getElementById('link').innerHTML = "<a href='#anchor"+i+"'>Read More</a>";
-
+		}
 	});
 	
 	
