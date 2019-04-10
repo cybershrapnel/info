@@ -202,12 +202,13 @@
 		});	
 	
 	$("body").on('DOMSubtreeModified', "#blog_load1", function() {	
-		$("body").on($( ".blog_load1" ).clone().prop('class', 'klon' ).prop('id', 'klon' ).prop('style', 'visibility: visible' ).prependTo( ".blog_load2" ));
+		$("body").on($( ".blog_load1" ).clone().prop('class', 'klone' ).prop('id', 'klone'+i ).prop('style', 'visibility: visible' ).prependTo( ".blog_load2" ));
 	});
+	
 	
 	$("body").on('DOMSubtreeModified', "#blog_load2", function() {	
 	$("body").on($( ".blog_post_text" ).prop('style', 'display: none' ));
-
+	$("body").on($( ".button button_2 blog_post_button" ).prop('id', 'klonebutton'+i ));
 	});
 	
 	dothis();
@@ -216,6 +217,8 @@
 	function showarticle(){
 		$("body").on($( ".blog_post_text_preview" ).prop('style', 'display: none' ));
 		$("body").on($( ".blog_post_text" ).prop('style', 'display: block' ));
+		
+		
 	}
 	
 	
