@@ -179,7 +179,7 @@
 	function gogo(){
 	go=1;	
 	}
-	
+	j=0;
 	function changelinks(){
 	//document.getElementById('link3').innerHTML = "<a href='#anchor"+i+"'>Read More</a>";
 
@@ -187,7 +187,10 @@
 		//$("a.link3").attr("href", "http://cupcream.com");
 		//$(".link3").attr("href", "http://www.google.com/");
 		//$( ".blog_load3" ).prop('class', 'klon22e' );
-		$("a#link1").attr("href", "#anchor1");
+		j++;
+		k=j+2;
+		
+		$("a#link"+k).attr("href", "#anchor1");
 	}
 	
 	
