@@ -187,32 +187,40 @@
 			
 		
 			var i=1;
+			var thestatus=0;
+			
+			while(thestatus==0){
+				$( "#blog_load1" ).load(i+".html", function( response, status, xhr ) {
+  					if ( status == "error" ) {
+	 					thestatus=1;
+   						 var msg = "Sorry but there was an error: ";
+   						 $( "#blog_load1" ).html( msg + xhr.status + " " + xhr.statusText );
+ 					 }
+				});
+				i++;
+			
+		}
+			
+			/*
+				$( "#blog_load1" ).load(i+".html", function( response, status, xhr ) {
+  					if ( status == "error" ) {
+	 					
+   						 var msg = "Sorry but there was an error: ";
+   						 $( "#blog_load1" ).html( msg + xhr.status + " " + xhr.statusText );
+ 					 }
+				});
+				i++;
+				$( "#blog_load1" ).load(i+".html", function( response, status, xhr ) {
+  					if ( status == "error" ) {
+	 					
+   						 var msg = "Sorry but there was an error: ";
+   						 $( "#blog_load1" ).html( msg + xhr.status + " " + xhr.statusText );
+ 					 }
+				});
+				i++;
+				*/
 			
 			
-				$( "#blog_load1" ).load(i+".html", function( response, status, xhr ) {
-  					if ( status == "error" ) {
-	 					
-   						 var msg = "Sorry but there was an error: ";
-   						 $( "#blog_load1" ).html( msg + xhr.status + " " + xhr.statusText );
- 					 }
-				});
-				i++;
-				$( "#blog_load1" ).load(i+".html", function( response, status, xhr ) {
-  					if ( status == "error" ) {
-	 					
-   						 var msg = "Sorry but there was an error: ";
-   						 $( "#blog_load1" ).html( msg + xhr.status + " " + xhr.statusText );
- 					 }
-				});
-				i++;
-				$( "#blog_load1" ).load(i+".html", function( response, status, xhr ) {
-  					if ( status == "error" ) {
-	 					
-   						 var msg = "Sorry but there was an error: ";
-   						 $( "#blog_load1" ).html( msg + xhr.status + " " + xhr.statusText );
- 					 }
-				});
-				i++;
 		});	
 	
 
