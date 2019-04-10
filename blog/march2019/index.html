@@ -224,7 +224,7 @@
 	$("body").on('DOMSubtreeModified', "#blog_load1", function() {
    alert('changed');
 		
-	$("body").on($( ".blog_load1" ).clone().prop('class', 'klon' ).appendTo( ".blog_load2" ));
+	$("body").on($( ".blog_load1" ).clone().prop('class', 'klon' ).prop('id', 'klon' ).appendTo( ".blog_load2" ));
 	
 	//$("body").on($( ".blog_load1" ).clone().prop('class', 'klon' ).appendTo( ".blog_load" ));
 		//alert('changed2');
