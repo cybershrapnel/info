@@ -229,9 +229,10 @@
 	
 	function showarticle(it){
 		it++;
+				$("body").on($( "#klonebutton"+it ).prop('style', 'display: none' ));
+
 		$("body").on($( "#blogposttextpreview"+it ).prop('style', 'display: none' ));
 		$("body").on($( ".blog_post_text" ).prop('style', 'display: block' ));
-		$( "#klonebutton"+it ).prop('style', 'display: none' );
 		//$("body").on($( "#klonebuttonshow"+it ).prop('style', 'display: block' ));
 		
 	}
