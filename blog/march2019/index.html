@@ -220,12 +220,14 @@
 
 		});	
 	
-	
+	var evens=0;
 	$("body").on('DOMSubtreeModified', "#blog_load1", function() {
    alert('changed');
+		evens++;
+		if((evens%2)==0)
 	$("body").on($( ".blog_load1" ).clone().appendTo( ".blog_load2" ));
-	$("body").on($( ".blog_load1" ).appendTo( ".blog_load" ));
-		alert('changed2');
+	//$("body").on($( ".blog_load1" ).appendTo( ".blog_load" ));
+		//alert('changed2');
 		
 });
 	
