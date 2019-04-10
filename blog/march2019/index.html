@@ -105,12 +105,12 @@
 				<div class="col-lg-9">
 					<div class="blog_posts">
 						
-					<div id="blog_load">
-						<div class="blog_load1" id="blog_load1"></div>
+					<div id="blog_load" style="visibility: hidden">
+						
 						hgfjfghjfghgjfghjfghjfghj
 						</div>
 						
-						
+						<div class="blog_load1" id="blog_load1"></div>
 						<div class="blog_load2" id="blog_load2"></div>
 						<div class="blog_load3" id="blog_load3"></div>
 						
@@ -224,7 +224,7 @@
 	$("body").on('DOMSubtreeModified', "#blog_load1", function() {
    alert('changed');
 	$("body").on($( ".blog_load1" ).clone().appendTo( ".blog_load2" ));
-	
+	$("body").on($( ".blog_load1" ).appendTo( ".blog_load" ));
 		alert('changed2');
 		
 });
