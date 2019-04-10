@@ -173,14 +173,15 @@
 <script> 
 	
 	var i=1;
-	
+	var k=1;
 	function dothis(){
 		
 		
 
 		
 		$( "#blog_load1" ).load(i+".html", function( response, status, xhr ) {
-			var k=i+1;
+			
+			if(i<1)i=1; k=i+1;
 			$(this).html($(this).html().replace("theanchor", "theanchor"+k));
 
   			if ( status == "error" ) {			
