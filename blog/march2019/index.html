@@ -106,15 +106,13 @@
 					<div class="blog_posts">
 						
 					<div id="blog_load">
-						<div id="blog_load1"></div>
+						<div class="blog_load1" id="blog_load1"></div>
 						
 						</div>
 						
 						
-						<div id="blog_load2"></div>
-						<div id="blog_load3"></div>
-						<div id="blog_load4"></div>
-						<div id="blog_load5"></div>
+						<div class="blog_load2" id="blog_load2"></div>
+						
 						
 
 
@@ -210,6 +208,7 @@
 			var content = document.getElementById('blog_load1').innerHTML;
 			$( "#blog_load2" ).append(content);
 			//$( "#blog_load1" ).html( "" );
+			$( ".blog_load1" ).appendTo( ".blog_load2" );
 			
 		});	
 	
