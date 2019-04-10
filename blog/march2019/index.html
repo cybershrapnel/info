@@ -183,7 +183,7 @@
 			var i=1;
 			
 			var stop=0;
-			var wait=1000;	
+		
 			for(let n=0;n<=10;n++){
 			
 				$( "#blog_load1" ).load(i+".html", function( response, status, xhr ) {
@@ -199,14 +199,9 @@
 					}
 				});
 				i++;	
+				while(stop==0){}
 				
-				
-				while(wait==1000)
-				{
-				if (stop==99){
-				wait=0;	
-				}
-				}
+		
 				
 				
 			}	
