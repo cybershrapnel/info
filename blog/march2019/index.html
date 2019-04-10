@@ -104,8 +104,12 @@
 				<!-- Blog Posts -->
 				<div class="col-lg-9">
 					<div class="blog_posts">
-					<div id="blog_load">
-		
+					<div id="blog_load"></div>
+					<div id="blog_load2"></div>
+						<div id="blog_load3"></div>
+						<div id="blog_load4"></div>
+						<div id="blog_load5"></div>
+						
 
 					</div>
 
@@ -194,7 +198,8 @@
 			
 			
 			while(msg == "load"){
-				$("#blog_load"+loadcount).load(loadcount+".html", function( response, status, xhr ) {
+				var filename=loadcount+".html"'
+				$("#blog_load2").load(filename, function( response, status, xhr ) {
   					if ( status == "error" ) {
   						 msg = "error";
   						 // $( "#blog_load" ).html( msg + xhr.status + " " + xhr.statusText );
