@@ -180,7 +180,7 @@
 			$("#socialmenu").load("../../socialmenu.html");
 			
 			var msg = 1;
-			var loadcount=2;
+			var loadcount=3;
 			
 			
 			
@@ -190,6 +190,7 @@
   						  $( "#blog_load"+loadcount ).html( msg + xhr.status + " " + xhr.statusText );
   					}
 					else{
+						 $( "#blog_load"+loadcount ).html( msg + xhr.status + " " + xhr.statusText );
 						msg=1;
 						loadcount=loadcount+1;
 					}
