@@ -202,14 +202,6 @@
 				i++;
 			
 			
-				$( "#blog_load1" ).load(i+".html", function( response, status, xhr ) {
-  					if ( status == "error" ) {
-	 					
-   						 var msg = "Sorry but there was an error: ";
-   						 $( "#blog_load1" ).html( msg + xhr.status + " " + xhr.statusText );
- 					 }
-				});
-				i++;
 
 		});	
 	
@@ -218,6 +210,14 @@
     //alert('changed');
 	$("body").on($( ".blog_load1" ).clone().appendTo( ".blog_load2" ));
 	
+				$( "#blog_load1" ).load(i+".html", function( response, status, xhr ) {
+  					if ( status == "error" ) {
+	 					
+   						 var msg = "Sorry but there was an error: ";
+   						 $( "#blog_load1" ).html( msg + xhr.status + " " + xhr.statusText );
+ 					 }
+				});
+				i++;
 });
 	
 	
