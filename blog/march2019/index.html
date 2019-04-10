@@ -185,10 +185,11 @@
 			
 			
 			var donext=1;
-var isEmpty = document.getElementById('blog_load2').innerHTML === "";
+			var i=2;
+			var isEmpty = "";
 			
 			
-			isEmpty = document.getElementById('blog_load2').innerHTML === "";
+			isEmpty = document.getElementById('blog_load'+i).innerHTML === "";
 			if(isEmpty && donext==1){
 			
 				$( "#blog_load2" ).load("2.html", function( response, status, xhr ) {
