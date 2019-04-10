@@ -181,7 +181,7 @@
 		
 		$( "#blog_load1" ).load(i+".html", function( response, status, xhr ) {
   			if ( status == "error" ) {			
-  				$( "#blog_load1" ).html( msg + xhr.status + " " + xhr.statusText );			
+  				$( "#blog_load1" ).html( "" );			
  				 }
 				else{
 					setTimeout(dothis(), 1000);
