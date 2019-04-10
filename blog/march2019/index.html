@@ -184,8 +184,8 @@
 			
 			var stop=0;
 		
-			for(let n=0;n<=10;n++){
-			
+			//for(let n=0;n<=10;n++){
+			function doit(){
 				$( "#blog_load1" ).load(i+".html", function( response, status, xhr ) {
   					if ( status == "error" ) {
 					 n=99;
@@ -195,7 +195,8 @@
 						return false;
  					 }
 					else{
-					stop=99;	
+					stop=50;	
+						
 					}
 				});
 				i++;	
@@ -206,10 +207,13 @@
 				counter++;
 				 $( "#blog_load3" ).html( counter+ "count" );
 				}
-				stop=0;
+				
+				
+				if (stop=50)
+					doit();
 		
 				
-				
+				stop=0;
 			}	
 		});	
 
