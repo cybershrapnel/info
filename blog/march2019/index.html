@@ -185,9 +185,9 @@
 			
 			$( "#blog_load3" ).load( loadcount+".html", function( response, status, xhr ) {
   if ( status == "error" ) {
-	  var newcount=loadcount+1;
+	  var newcount="#blog_load"+loadcount+1;
     var msg = "Sorry but there was an error: ";
-    $( "#blog_load4" ).html( msg + xhr.status + " " + xhr.statusText );
+    $( newcount ).html( msg + xhr.status + " " + xhr.statusText );
   }
 });
 			
