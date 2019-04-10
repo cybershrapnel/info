@@ -173,17 +173,17 @@
 <script> 
 	var i=1;
 
-	
+	stop=0;
 	function dothis(){
 		
 		
 
-			
+		if(stop==0){
 		
 				$( "#blog_load1" ).load(i+".html", function( response, status, xhr ) {
   					if ( status == "error" ) {
-						
-   						 var msg = n+ " Sorry but there was an error: ";
+						stop=1;
+   						 var msg =" Sorry but there was an error: ";
   						// $( "#blog_load1" ).html( msg + xhr.status + " " + xhr.statusText );
 					
  					 }
@@ -199,7 +199,7 @@
 				
 				
 			
-			
+	}
 			
 			
 		}
