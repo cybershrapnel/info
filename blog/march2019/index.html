@@ -194,18 +194,6 @@
 			
 			
 			
-			while(msg == "load"){
-				$("#blog_load").load(loadcount+".html", function( response, status, xhr ) {
-  					if ( status == "error" ) {
-  						 msg = "error";
-  						 // $( "#blog_load" ).html( msg + xhr.status + " " + xhr.statusText );
-  					}
-					else{
-						msg="load";
-						loadcount++;
-					}
-				});
-			}
 		});
 	
 	
