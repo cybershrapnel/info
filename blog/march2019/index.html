@@ -175,7 +175,12 @@
 			$("#login").load("../../login.html");
 			$("#menu").load("../../menu.html");
 			$("#socialmenu").load("../../socialmenu.html");
-			$("#blog_load").load("1.html", function( response, status, xhr ) {
+			
+			var msg = "load";
+			car loadcount=1;
+			
+			while(msg == "load"){
+			$("#blog_load").load(loadcoun+".html", function( response, status, xhr ) {
   if ( status == "error" ) {
     var msg = "Sorry but there was an error: ";
     $( "#blog_load" ).html( msg + xhr.status + " " + xhr.statusText );
@@ -183,12 +188,17 @@
 });
 			$("#blog_load").load("2.html", function( response, status, xhr ) {
   if ( status == "error" ) {
-    var msg = "Sorry but there was an error: ";
-    $( "#blog_load" ).html( msg + xhr.status + " " + xhr.statusText );
+    msg = "error";
+    //$( "#blog_load" ).html( msg + xhr.status + " " + xhr.statusText );
   }
+				else{
+				msg="load";
+					loadcount++;
+				}
 });
 			//$("#blog_load").append("1.html");
 		});
+	}
 	
 </script>
 	
