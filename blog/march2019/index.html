@@ -196,7 +196,7 @@
 			isEmpty = document.getElementById('blog_load'+i).innerHTML === "";
 			if(isEmpty && donext==1){
 			
-				$( "#blog_load1" ).load(i+".html", function( response, status, xhr ) {
+				$( "#blog_load1" ).get(i+".html", function( response, status, xhr ) {
   					if ( status == "error" ) {
 	 					donext=0;
    						 var msg = "Sorry but there was an error: ";
@@ -214,9 +214,7 @@
 	
 	$("body").on('DOMSubtreeModified', "#blog_load1", function() {
     //alert('changed');
-		var clonedDiv = $('#blog_load1').clone();
-clonedDiv.attr("id", "blog_load2");
-$('#blog_load1').after(cloneDiv);
+
 	
 });
 	
