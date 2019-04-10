@@ -214,7 +214,10 @@
 		$( "#blogposttextpreview" ).prop('id', 'blogposttextpreview'+i );
 		var newi=i-2;
 		$( "#anchor" ).prop('id', 'anchor'+newi );
-		$("body").on($( ".blog_post_text" ).prop('style', 'display: none' ));
+		
+		//$("body").on($( ".blog_post_text" ).prop('style', 'display: none' ));
+		$( ".blog_post_text" ).prop('style', 'display: none' );
+		
 		//$("body").on($( ".blog_post_text" ).prop('id', 'blogtext'+i ));
 
 	
