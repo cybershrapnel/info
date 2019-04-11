@@ -18,10 +18,8 @@
 		function diditload(){
 			
 			setTimeout(function(){
-				 if (window.matchMedia("(min-width: 500px)").matches) {
-       // console.log("Screen width is at least 500px");
+				 if (window.matchMedia("(min-width: 991px)").matches) {
     } else {
-       // console.log("Screen less than 500px");
 	    document.getElementById("sidebar").style.position="relative";
     }	
 			
@@ -31,10 +29,8 @@
 		}
 		
 window.addEventListener("resize", function() {
-    if (window.matchMedia("(min-width: 500px)").matches) {
-       // console.log("Screen width is at least 500px");
+    if (window.matchMedia("(min-width: 991px)").matches) {
     } else {
-       // console.log("Screen less than 500px");
 	    document.getElementById("sidebar").style.position="relative";
     }
 });
