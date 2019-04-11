@@ -263,9 +263,10 @@
 		var targ;
     		var e = window.event;
    		targ = e.target;
+		var stringtarg=targ+" k";
 		var checkit="anchor"+i;
 		for(l=0;l<i;l++){
-			if (targ.indexOf(checkit) !== -1) {
+			if (stringtarg.indexOf(checkit) !== -1) {
 			alert("anchor contains: " +"anchor"+i);
 			}
 		}
