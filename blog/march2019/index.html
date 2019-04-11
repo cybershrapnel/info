@@ -269,7 +269,7 @@
 		for(l=0;l<i;l++){
 			checkit="anchor" +l;
 			if (stringtarg.indexOf(checkit) !== -1) {
-			alert("anchor contains: " +"anchor"+l);
+			//alert("anchor contains: " +"anchor"+l);
 				it==l;
 			}
 		}
@@ -288,7 +288,21 @@
 	}
 	
 	function showarticle2(it, event){
-		 var a = event.target;
+		var a = event.target;		
+		var targ;
+    		var e = window.event;
+   		targ = e.target;
+		var stringtarg=targ+" k";
+		var checkit="anchor"+i;
+		var thisi=i;
+		for(l=0;l<i;l++){
+			checkit="anchor" +l;
+			if (stringtarg.indexOf(checkit) !== -1) {
+			//alert("anchor contains: " +"anchor"+l);
+				it==l;
+			}
+		}
+		
 		it++;it++;
 		$( "#klonebutton"+it ).prop('style', 'display: none' );
 		$( "#klonebuttonhide"+it ).prop('style', 'display: block' );
