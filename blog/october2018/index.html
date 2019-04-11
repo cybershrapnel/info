@@ -255,7 +255,26 @@
 	//dothis();
 	
 	
-	function hidearticle(it){
+	function hidearticle2(it, event){
+		var a = event.target;		
+		var targ;
+    		var e = window.event;
+   		targ = e.target;
+		var stringtarg=targ+" k";
+		var checkit="anchor"+i;
+		var thisi=i;
+		for(l=0;l<i;l++){
+			checkit="anchor" +l;
+			if (stringtarg.indexOf(checkit) !== -1) {
+			//alert("anchor contains: " +"anchor"+l);
+				it=l;
+				artnum=it;
+			}
+		}
+		
+		
+		
+		//alert("Hello! I am an alert box!! " + a +targ);
 		it++;it++;
 		$( "#klonebutton"+it ).prop('style', 'display: block' );
 		$( "#klonebuttonhide"+it ).prop('style', 'display: none' );
@@ -263,10 +282,25 @@
 		$( "#blogposttext"+it ).prop('style', 'display: none' );	
 		//$("body").on($( "#blogposttextpreview"+it ).prop('style', 'display: block' ));
 		$( "#blogposttextpreview"+it ).prop('style', 'display: block' );
-
 	}
 	
-	function showarticle(it){
+	function showarticle2(it, event){
+		var a = event.target;		
+		var targ;
+    		var e = window.event;
+   		targ = e.target;
+		var stringtarg=targ+" k";
+		var checkit="anchor"+i;
+		var thisi=i;
+		for(l=0;l<i;l++){
+			checkit="anchor" +l;
+			if (stringtarg.indexOf(checkit) !== -1) {
+			//alert("anchor contains: " +"anchor"+l);
+				it=l;
+				artnum=it;
+			}
+		}
+		//alert("Hello! I am an alert box!! " + a +targ);
 		it++;it++;
 		$( "#klonebutton"+it ).prop('style', 'display: none' );
 		$( "#klonebuttonhide"+it ).prop('style', 'display: block' );
@@ -274,10 +308,11 @@
 		$( "#blogposttext"+it ).prop('style', 'display: block' );		
 		//$("body").on($( "#blogposttextpreview"+it ).prop('style', 'display: none' ));
 		$( "#blogposttextpreview"+it ).prop('style', 'display: none' );
-
 		
 	}
 	
+	
+	var artnum=0;
 	
 </script>
 	
