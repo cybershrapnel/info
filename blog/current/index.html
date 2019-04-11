@@ -13,6 +13,18 @@
 <link rel="stylesheet" type="text/css" href="../../styles/blog_responsive.css">
 	<script type="text/javascript" src="../../js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript">
+		
+		
+window.addEventListener("resize", function() {
+    if (window.matchMedia("(min-width: 500px)").matches) {
+       // console.log("Screen width is at least 500px");
+    } else {
+       // console.log("Screen less than 500px");
+	    document.getElementByClass("sidebar").style.position="relative";
+    }
+});
+		
+		
 		$(document).ready(function(){
 			$(document).on('mouseenter','a.colorbox', function(){
 				$(this).colorbox({
