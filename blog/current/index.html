@@ -14,12 +14,16 @@
 	<script type="text/javascript" src="../../js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript">
 		
-	 if (window.matchMedia("(min-width: 500px)").matches) {
+
+		function diditload(){
+				 if (window.matchMedia("(min-width: 500px)").matches) {
        // console.log("Screen width is at least 500px");
     } else {
        // console.log("Screen less than 500px");
 	    document.getElementById("sidebar").style.position="relative";
     }	
+		}
+		
 window.addEventListener("resize", function() {
     if (window.matchMedia("(min-width: 500px)").matches) {
        // console.log("Screen width is at least 500px");
@@ -47,7 +51,7 @@ window.addEventListener("resize", function() {
 		<!-- Header -->
 	<header class="header">
 		<div class="header_content d-flex flex-row align-items-center justify-content-start">
-			<a href="http://www.nanocheeze.com"><!-- Logo --><img width=90 src="../../images/ncz.png"></a>
+			<a href="http://www.nanocheeze.com"><!-- Logo --><img width=90 src="../../images/ncz.png" onload="diditload()"></a>
 			<div id="logofill" class="logofill">
 			
 			</div>
