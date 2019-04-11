@@ -18,7 +18,8 @@
 		function diditload(){
 			
 			setTimeout(function(){
-				 if (window.matchMedia("(min-width: 991px)").matches) {
+				 if (window.matchMedia("(min-width: 992px)").matches) {
+					 document.getElementById("sidebar").style.position="fixed"; 
     } else {
 	    document.getElementById("sidebar").style.position="relative";
     }	
@@ -29,7 +30,8 @@
 		}
 		
 window.addEventListener("resize", function() {
-    if (window.matchMedia("(min-width: 991px)").matches) {
+    if (window.matchMedia("(min-width: 992px)").matches) {
+	     document.getElementById("sidebar").style.position="fixed";
     } else {
 	    document.getElementById("sidebar").style.position="relative";
     }
