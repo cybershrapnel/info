@@ -171,17 +171,19 @@
 		$("a#link"+k).attr("href", "#anchor"+j);
 		}
 	}
-	var setpath="current";
-	function thepath(inpath){
-	setpath=inpath;	
-	}
+	
+	//var setpath="current";
+	//function thepath(inpath){
+	//setpath=inpath;	
+	//}
 	
 	function dothis(){
 		
 		
 
-		
-		$( "#blog_load1" ).load("../"+setpath+"/"+i+".html", function( response, status, xhr ) {
+		//$( "#blog_load1" ).load("../"+setpath+"/"+i+".html", function( response, status, xhr ) {
+
+		$( "#blog_load1" ).load(i+".html", function( response, status, xhr ) {
 			
 			
 			//$(this).html($(this).html().replace("theanchorchangerthingynoonewilleveruse", "anchor"+i));
