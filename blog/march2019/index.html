@@ -259,11 +259,17 @@
 	}
 	
 	function hidearticle2(it, event){
-		 var a = event.target;
+		var a = event.target;		
+		var targ;
+    		var e = window.event;
+   		targ = e.target;
+		for(l=0;l<i;l++){
+			if (targ.indexOf('anchor'+i) !== -1) {
+			alert("anchor contains: " +"anchor"+i);
+			}
+		}
 		
-		 var targ;
-    var e = window.event;
-   targ = e.target;
+		
 		
 		alert("Hello! I am an alert box!! " + a +targ);
 		it++;it++;
