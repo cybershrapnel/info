@@ -258,6 +258,31 @@
 	artnum=it;
 	}
 	
+	function hidearticle2(it, event){
+		 var a = event.target;
+		it++;it++;
+		$( "#klonebutton"+it ).prop('style', 'display: block' );
+		$( "#klonebuttonhide"+it ).prop('style', 'display: none' );
+		$( "#klonebuttonhidetext"+it ).prop('style', 'display: none' );
+		$( "#blogposttext"+it ).prop('style', 'display: none' );	
+		//$("body").on($( "#blogposttextpreview"+it ).prop('style', 'display: block' ));
+		$( "#blogposttextpreview"+it ).prop('style', 'display: block' );
+
+	}
+	
+	function showarticle2(it, event){
+		 var a = event.target;
+		it++;it++;
+		$( "#klonebutton"+it ).prop('style', 'display: none' );
+		$( "#klonebuttonhide"+it ).prop('style', 'display: block' );
+		$( "#klonebuttonhidetext"+it ).prop('style', 'display: block' );
+		$( "#blogposttext"+it ).prop('style', 'display: block' );		
+		//$("body").on($( "#blogposttextpreview"+it ).prop('style', 'display: none' ));
+		$( "#blogposttextpreview"+it ).prop('style', 'display: none' );
+
+		
+	}
+	
 	function hidearticle(it){
 		it++;it++;
 		$( "#klonebutton"+it ).prop('style', 'display: block' );
