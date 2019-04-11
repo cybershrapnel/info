@@ -265,9 +265,11 @@
    		targ = e.target;
 		var stringtarg=targ+" k";
 		var checkit="anchor"+i;
+		var thisi=i;
 		for(l=0;l<i;l++){
+			checkit="anchor" +l;
 			if (stringtarg.indexOf(checkit) !== -1) {
-			alert("anchor contains: " +"anchor"+i);
+			alert("anchor contains: " +"anchor"+l);
 			}
 		}
 		
