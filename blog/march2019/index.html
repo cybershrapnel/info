@@ -260,7 +260,12 @@
 	
 	function hidearticle2(it, event){
 		 var a = event.target;
-		alert("Hello! I am an alert box!! " + a);
+		
+		 var targ;
+    var e = window.event;
+   targ = e.target;
+		
+		alert("Hello! I am an alert box!! " + a +targ);
 		it++;it++;
 		$( "#klonebutton"+it ).prop('style', 'display: block' );
 		$( "#klonebuttonhide"+it ).prop('style', 'display: none' );
