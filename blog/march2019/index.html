@@ -13,6 +13,33 @@
 <link rel="stylesheet" type="text/css" href="../../styles/blog_responsive.css">
 	<script type="text/javascript" src="../../js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript">
+		
+		
+		
+		function diditload(){
+			
+			setTimeout(function(){
+				 if (window.matchMedia("(min-width: 992px)").matches) {
+					 document.getElementById("sidebar").style.position="fixed"; 
+    } else {
+	    document.getElementById("sidebar").style.position="relative";
+    }	
+			
+			}, 3000);
+			
+			
+		}
+		
+window.addEventListener("resize", function() {
+    if (window.matchMedia("(min-width: 992px)").matches) {
+	     document.getElementById("sidebar").style.position="fixed";
+    } else {
+	    document.getElementById("sidebar").style.position="relative";
+    }
+});
+		
+		
+		
 		$(document).ready(function(){
 			$(document).on('mouseenter','a.colorbox', function(){
 				$(this).colorbox({
@@ -30,7 +57,7 @@
 		<!-- Header -->
 	<header class="header">
 		<div class="header_content d-flex flex-row align-items-center justify-content-start">
-			<a href="http://www.nanocheeze.com"><!-- Logo --><img width=90 src="../../images/ncz.png"></a>
+			<a href="http://www.nanocheeze.com"><!-- Logo --><img width=90 src="../../images/ncz.png" onload="diditload()"></a>
 			<div id="logofill" class="logofill">
 			
 			</div>
