@@ -208,7 +208,7 @@ window.addEventListener("resize", function() {
 
 		//$( "#blog_load1" ).load("../"+setpath+"/"+i+".html", function( response, status, xhr ) {
 
-		$( "#blog_load1" ).load(i+".html", function( response, status, xhr ) {
+		$( ".blog_load1" ).load(i+".html", function( response, status, xhr ) {
 			
 			
 			//$(this).html($(this).html().replace("theanchorchangerthingynoonewilleveruse", "anchor"+i));
@@ -246,8 +246,10 @@ window.addEventListener("resize", function() {
 		//$("body").on($( ".blog_load1" ).clone().prop('class', 'klone' ).prop('id', 'klone'+i ).prop('style', 'visibility: visible' ).prependTo( ".blog_load2" ));
 		
 		if (go==0){
+			
 		$( "#blog_load1" ).clone().prop('class', 'klone' ).prop('id', 'klone'+i ).prop('style', 'visibility: visible' ).prependTo( ".blog_load2" );
 		$( "#blog_load1" ).empty();
+		
 			//go=1;
 			// document.getElementById('link').innerHTML = "<a href='#anchor"+i+"'>Read More</a>";
 		}
