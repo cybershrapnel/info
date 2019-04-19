@@ -208,7 +208,7 @@ window.addEventListener("resize", function() {
 
 		//$( "#blog_load1" ).load("../"+setpath+"/"+i+".html", function( response, status, xhr ) {
 
-		$( ".blog_load1" ).load(i+".html", function( response, status, xhr ) {
+		$( "#blog_load1" ).load(i+".html", function( response, status, xhr ) {
 			
 			
 			//$(this).html($(this).html().replace("theanchorchangerthingynoonewilleveruse", "anchor"+i));
@@ -227,7 +227,7 @@ window.addEventListener("resize", function() {
 				}		
 			});
 			i++;			
-		
+		$( "#blog_load1" ).empty();
 		}
 
 		$(function(){
