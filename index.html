@@ -297,7 +297,38 @@
 			</div>
 		</div>
 	</div>
+<div style="text-align: center;"><div><h1>Current Number of Blocks:</h1></div>
+    <div><h2 id="apiResult">Loading...</h2></div></div>
 
+    <script>
+        // Function to fetch and display the data from the API
+        function fetchAndDisplayApiData() {
+            // The API endpoint
+            const apiUrl = 'https://nanocheeze.com/api/getblockcount';
+
+            // Use the Fetch API to get the data
+            fetch(apiUrl)
+                .then(response => {
+                    // Check if the request was successful
+                    if (response.ok) {
+                        return response.text();  // Get the response text (the number you mentioned)
+                    }
+                    throw new Error('Network response was not ok.');
+                })
+                .then(text => {
+                    // Update the HTML with the result
+                    document.getElementById('apiResult').textContent = text;
+                })
+                .catch(error => {
+                    // If there's an error, log it and update the HTML
+                    console.error('Fetch Error:', error);
+                    document.getElementById('apiResult').textContent = 'Failed to load data';
+                });
+        }
+
+        // Call the function on page load
+        fetchAndDisplayApiData();
+    </script>
 	<!-- Intro -->
 
 	<div class="intro">
