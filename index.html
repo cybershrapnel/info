@@ -299,33 +299,47 @@
 	</div>
 
 
-    <script>
-        // Function to fetch and display the data from the API
+   <script>
         function fetchAndDisplayApiData() {
-            // The API endpoint
-            const apiUrl = 'https://nanocheeze.com/api/getblockcount';
+            const blockCountUrl = 'https://nanocheeze.com/api/getblockcount';
 
-            // Use the Fetch API to get the data
-            fetch(apiUrl)
+            // Fetch block count
+            fetch(blockCountUrl)
                 .then(response => {
-                    // Check if the request was successful
-                    if (response.ok) {
-                        return response.text();  // Get the response text (the number you mentioned)
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok for block count.');
                     }
-                    throw new Error('Network response was not ok.');
+                    return response.text();
                 })
-                .then(text => {
-                    // Update the HTML with the result
-                    document.getElementById('apiResult').textContent = text;
+                .then(blockCount => {
+                    // Update the text content with the block count
+                    document.getElementById('apiResult').textContent = blockCount;
+
+                    // Construct the block hash URL with the fetched block count
+                    const blockHashUrl = `https://nanocheeze.com/api/getblockhash?index=${blockCount}`;
+
+                    // Fetch block hash
+                    return fetch(blockHashUrl);
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok for block hash.');
+                    }
+                    return response.text();
+                })
+                .then(hash => {
+                    // Construct the URL for the block explorer
+                    const blockExplorerUrl = `https://nanocheeze.com/explorer/block/${hash}`;
+
+                    // Update the h2 element to be a link
+                    document.getElementById('apiResult').innerHTML = `<a href="${blockExplorerUrl}" target="_blank">${document.getElementById('apiResult').textContent}</a>`;
                 })
                 .catch(error => {
-                    // If there's an error, log it and update the HTML
                     console.error('Fetch Error:', error);
                     document.getElementById('apiResult').textContent = 'Failed to load data';
                 });
         }
 
-        // Call the function on page load
         fetchAndDisplayApiData();
     </script>
 	<!-- Intro -->
